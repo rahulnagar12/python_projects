@@ -1,0 +1,21 @@
+list=["sudha", "sarita", "sanjana",]
+list2=[28,7,29,2,56]
+print(list)
+print(list[2])
+print(list2[1:])
+a =[list2,list]
+print(a)
+print(list+list2)
+print("\n")
+print("\n")
+print("\n")
+list.append("rahul")
+print(list)
+list.extend(list2)
+print(list)
+list.remove("sarita")
+print(list)
+list.reverse()
+print(list)
+list.pop()
+print(list)
