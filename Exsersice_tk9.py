@@ -4,15 +4,25 @@ root = Tk()
 root.title()
 root.geometry("600x1000")
 
-# function which will print data on form live
+# function which will print data on form live and one for file saving
 def show():
-    Label(root, text = nam1.get()).grid(row=12, column=1)
-    Label(root, text = nam1.get()).grid(row=13, column=1)
-    Label(root, text = nam1.get()).grid(row=14, column=1)
-    Label(root, text = nam1.get()).grid(row=15, column=1)
-    Label(root, text = nam1.get()).grid(row=16, column=1)
-    Label(root, text = nam1.get()).grid(row=17, column=1)
-    Label(root, text = nam1.get()).grid(row=18, column=1)
+    Label(root, text = nam1.get()).grid()
+    Label(root, text = fatherval.get()).grid()
+    Label(root, text = motherval.get()).grid()
+    Label(root, text = castval.get()).grid()
+    Label(root, text = mobval.get()).grid()
+    Label(root, text = genval.get()).grid()
+    Label(root, text = payval.get()).grid()
+
+def filesave():
+    '''
+    fil = open("user.txt", "a")
+    fil.write(f"{nam1, fatherval, motherval, castval, mobval, genval, payval}\n")
+    fil.close()
+    '''
+    pass
+
+
 
 clg_name = Label(root, text ="Govt. Pollytechnic JHALAWAR" ,
 font=("arial", 20, "bold"), ).grid(columnspan = 5, row = 0, column = 1, pady = 40)
@@ -65,8 +75,12 @@ paybtn1.grid(row=7, column=2)
 
 # Sumbmit btn and print btn for form
 
-prn = Button(root, text = "SHOW", COMMAND=show)
+prn = Button(root, text = "SHOW", command=show ).grid(row=11, column=2)
+sav = Button(root, text = "Submit Form", command=filesave()).grid(row=11, column=1)
+
+
 
 
 
 root.mainloop()
+print(filesave())
